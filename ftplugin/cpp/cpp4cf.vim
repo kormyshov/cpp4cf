@@ -15,11 +15,10 @@ function! s:LoadTemplate()
 
 	try
 		let s:template_lines = readfile(s:cpp4cf_template)
+		call append(0, s:template_lines)
 	catch /E484/
 		echom "Error in cpp4cf.vim: couldn't read file: " . s:cpp4cf_template
 	endtry
-
-	call append(0, s:template_lines)
 
 	normal gg
 
