@@ -1,4 +1,9 @@
-" Only do this when not done yet for this buffer
+" File: cpp4cf.vim
+" Author: Kormyshov Mikhail <kormyshov {at} gmail.com>
+" Description: Plugin for fast and simple C++ solution codeforces
+" Version: 0.1
+" Commands: CFTemplate, CFPatch
+
 if exists("b:did_cpp4cf_ftplugin")
     finish
 endif
