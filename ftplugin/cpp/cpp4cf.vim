@@ -20,7 +20,7 @@ function! s:LoadTemplate()
 		echo s:template_lines
 
 		let s:line = 0
-		for i in range (0, len(s:template_lines))
+		for i in range (0, len(s:template_lines)-1)
 
 			if s:template_lines[i] == '// [[TESTS]]'
 
