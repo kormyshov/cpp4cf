@@ -25,7 +25,11 @@ function! s:LoadTemplate()
 				continue
 			endif
 			if s:template_lines[i] == '// [[MAIN]]'
-
+				let s:main_lines = ['int main()','{','freopen("'.bufname("%").'","r",stdin);','return 0;','}']
+				for j in range (0, len(s:main_lines)-1)
+					call append(s:line, s:main_lines[j])
+					let s:line += 1
+				endfor
 				continue
 			endif
 			if match(s:template_lines[i],"int main()") >= 0
