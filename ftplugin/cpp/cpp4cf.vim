@@ -51,4 +51,11 @@ function! s:LoadTemplate()
 
 endfunction
 
+function! s:Patch()
+	normal :%s/int main()/int cpp4cf()/
+	normal :%s/int cpp4cf_main()/int main()/
+	normal :%s/int cpp4cf()/int cpp4cf_main()/
+endfunction
+
 command! CFTemplate call s:LoadTemplate()
+command! CFPatch call s:Patch()
