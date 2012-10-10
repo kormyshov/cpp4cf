@@ -17,7 +17,7 @@ function! s:LoadTemplate()
 	try
 		let s:template_lines = readfile(s:cpp4cf_template)
 
-		let s:line = 1;
+		let s:line = 1
 		for i in range (0, len(s:template_lines))
 
 			if s:template_lines[i] == "// [TESTS]"
