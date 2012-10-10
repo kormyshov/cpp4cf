@@ -17,14 +17,16 @@ function! s:LoadTemplate()
 	try
 		let s:template_lines = readfile(s:cpp4cf_template)
 
-		let s:line = 1
+		echo s:template_lines
+
+		let s:line = 0
 		for i in range (0, len(s:template_lines))
 
-			if s:template_lines[i] == "// [TESTS]"
+			if s:template_lines[i] == "// [[TESTS]]"
 
 				continue
 			endif
-			if s:template_lines[i] == "// [MAIN]"
+			if s:template_lines[i] == "// [[MAIN]]"
 
 				continue
 			endif
