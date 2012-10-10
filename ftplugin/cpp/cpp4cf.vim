@@ -6,6 +6,7 @@ let b:did_cpp4cf_ftplugin = 1
 
 if !exists('s:cpp4cf_template')
 	let s:cpp4cf_template = globpath(&rtp, '**/cpp/template.cpp')
+	let s:cpp4cf_template = s:cpp4cf_template[:match(s:cpp4cf_template,".cpp")+4]
 endif
 
 function! s:LoadTemplate()
