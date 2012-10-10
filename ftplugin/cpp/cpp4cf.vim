@@ -23,7 +23,7 @@ function! s:LoadTemplate()
 			if s:template_lines[i] == "// [TESTS]"
 
 				continue
-			end if
+			endif
 			if s:template_lines[i] == "// [MAIN]"
 
 				continue
