@@ -28,6 +28,9 @@ function! s:LoadTemplate()
 
 				continue
 			endif
+			if match(s:template_lines[i],"int main()") >= 0
+				let s:template_lines[i] = substitute(s:template_lines[i], "int main()", "int cpp4cf_main()", "")
+			endif
 
 			call append(s:line, s:template_lines[i])
 			let s:line += 1
