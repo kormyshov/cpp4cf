@@ -27,4 +27,4 @@ function! s:LoadTemplate()
 
 endfunction
 
-command! :CFTemplate call s:LoadTemplate()
+command! CFTemplate call s:LoadTemplate()
