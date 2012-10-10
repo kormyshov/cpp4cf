@@ -25,7 +25,7 @@ function! s:LoadTemplate()
 				continue
 			endif
 			if s:template_lines[i] == '// [[MAIN]]'
-				let s:main_lines = ["int main()","{","\tfreopen(\"".bufname("%")."\",\"r\",stdin);","","\tchar s[99];","\tbool f;","","\twhile(true) {","\t\tcin>>s;","\t\tif(cin.eof()) break;","\t\tif(strstr(s,\"/*\")) {","\t\t\tcin>>s;","\t\t\tif(strstr(s,\"Test\")) {","\t\t\t\tcin>>s;","\t\t\t\tif(strstr(s,\"on\")) {","\t\t\t\t\tcout<<\"Output: \";","\t\t\t\t\tcpp4cf_main();","\t\t\t\t\tcout<<\"\\nAnswer: \";","\t\t\t\t\tf = false;","\t\t\t\t\twhile(true) {","\t\t\t\t\t\tcin>>s;","\t\t\t\t\t\tif(strstr(s,\"*/\")) break;","\t\t\t\t\t\tif(strstr(s,\"//\") == 0) {","\t\t\t\t\t\t\tif(f) cout<<endl;","\t\t\t\t\t\t\telse f = true;","\t\t\t\t\t\t}else cout<<s<<\" \";","\t\t\t\t\t}","\t\t\t\t\tcout<<\"\\n\\n\";","\t\t\t\t}","\t\t\t}","\t\t}","\t}","","\treturn 0;","}"]
+				let s:main_lines = ["int main()","{","\tfreopen(\"".bufname("%")."\",\"r\",stdin);","","\tchar s[99];","\tbool f;","","\twhile(true) {","\t\tcin>>s;","\t\tif(cin.eof()) break;","\t\tif(strstr(s,\"/*\")) {","\t\t\tcin>>s;","\t\t\tif(strstr(s,\"Test\")) {","\t\t\t\tcin>>s;","\t\t\t\tif(strstr(s,\"on\")) {","\t\t\t\t\tcout<<\"Output: \";","\t\t\t\t\tcpp4cf_main();","\t\t\t\t\tcout<<\"\\nAnswer: \";","\t\t\t\t\tf = false;","\t\t\t\t\twhile(true) {","\t\t\t\t\t\tcin>>s;","\t\t\t\t\t\tif(strstr(s,\"*/\")) break;","\t\t\t\t\t\tif(strstr(s,\"//\")) {","\t\t\t\t\t\t\tif(f) cout<<endl;","\t\t\t\t\t\t\telse f = true;","\t\t\t\t\t\t}else cout<<s<<\" \";","\t\t\t\t\t}","\t\t\t\t\tcout<<\"\\n\\n\";","\t\t\t\t}","\t\t\t}","\t\t}","\t}","","\treturn 0;","}"]
 				for j in range (0, len(s:main_lines)-1)
 					call append(s:line, s:main_lines[j])
 					let s:line += 1
