@@ -17,8 +17,6 @@ function! s:LoadTemplate()
 	try
 		let s:template_lines = readfile(s:cpp4cf_template)
 
-		echo s:template_lines
-
 		let s:line = 0
 		for i in range (0, len(s:template_lines)-1)
 
