@@ -1,19 +1,21 @@
+// [[TESTS]]
+
 #include <iostream>
 #include <fstream>
 #include <cstdio>
 
-int cpp4cf_main()
+int main()
 {
-	int a, b;
-	cin>>a>>b;
-	cout<<a+b;
+
 	return 0;
 }
 
+
+// [[MAIN]]
 int main()
 {
 	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
+
 	char s[10];
 	int N;
 
@@ -25,3 +27,5 @@ int main()
 
 	return 0;
 }
+// [[end cpp4cf]]
+

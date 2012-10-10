@@ -16,7 +16,24 @@ function! s:LoadTemplate()
 
 	try
 		let s:template_lines = readfile(s:cpp4cf_template)
-		call append(0, s:template_lines)
+
+		let s:line = 1;
+		for i in range (0, len(s:template_lines))
+
+			if s:template_lines[i] == "// [TESTS]"
+
+				continue
+			end if
+			if s:template_lines[i] == "// [MAIN]"
+
+				continue
+			endif
+
+			call append(s:line, s:template_lines[i])
+			s:line += 1
+
+		endfor
+
 	catch /E484/
 		echom "Error in cpp4cf.vim: couldn't read file: " . s:cpp4cf_template
 	endtry
