@@ -30,7 +30,7 @@ function! s:LoadTemplate()
 			endif
 
 			call append(s:line, s:template_lines[i])
-			s:line += 1
+			let s:line += 1
 
 		endfor
 
