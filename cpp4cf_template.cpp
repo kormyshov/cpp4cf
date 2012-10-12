@@ -1,4 +1,3 @@
-// [[TESTS]]
 #include <iostream>
 #include <fstream>
 #include <cstdio>
@@ -13,3 +12,5 @@ int main()
 }
 
 // [[MAIN]]
+
+// [[TESTS]]

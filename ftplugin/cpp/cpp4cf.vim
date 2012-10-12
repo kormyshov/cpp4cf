@@ -1,7 +1,7 @@
 " File: cpp4cf.vim
 " Author: Kormyshov Mikhail <kormyshov {at} gmail.com>
 " Description: Plugin for fast and simple C++ solution codeforces
-" Version: 0.1
+" Version: 0.1.1
 " Commands: CFTemplate, CFPatch
 
 if exists("b:did_cpp4cf_ftplugin")
@@ -10,7 +10,7 @@ endif
 let b:did_cpp4cf_ftplugin = 1
 
 if !exists('s:cpp4cf_template')
-	let s:cpp4cf_template = globpath(&rtp, '**/cpp/template.cpp')
+	let s:cpp4cf_template = globpath(&rtp, '**/cpp4cf_template.cpp')
 	let s:cpp4cf_template = s:cpp4cf_template[:match(s:cpp4cf_template,"template")+11]
 endif
 
