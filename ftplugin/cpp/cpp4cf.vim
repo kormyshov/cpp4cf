@@ -100,9 +100,11 @@ endfunction
 
 function! s:LoadTests()
 	normal G<CR>
-	:r!php globpath(&rtp, '**/ftplugin/cpp/parser.php')
+	:r!php $HOME/.vim/bundle/cpp4cf/ftplugin/cpp/parser.php
 endfunction
 
 command! CFTemplate call s:LoadTemplate()
 command! CFPatch call s:Patch()
 command! CFTests call s:LoadTests()
+
+
