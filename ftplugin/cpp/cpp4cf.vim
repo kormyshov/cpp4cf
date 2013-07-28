@@ -100,7 +100,9 @@ endfunction
 
 function! s:LoadTests(contest, task)
 	normal G<CR>
-	:r!php $HOME/.vim/bundle/cpp4cf/ftplugin/cpp/parser.php a:contest a:task
+	let s:cpp4cf_path = 'php '.$HOME.'/.vim/bundle/cpp4cf/ftplugin/cpp/parser.php '.a:contest.' '.a:tast
+	:r!s:cpp4cf_path
+"	:r!php $HOME/.vim/bundle/cpp4cf/ftplugin/cpp/parser.php a:contest a:task
 endfunction
 
 command! CFTemplate call s:LoadTemplate()
