@@ -2,7 +2,7 @@
 " Author: Kormyshov Mikhail <kormyshov {at} gmail.com>
 " Description: Plugin for fast and simple C++ solution codeforces
 " Version: 0.1.1
-" Commands: CFTemplate, CFPatch
+" Commands: CFTemplate, CFPatch, CFTests
 
 if exists("b:did_cpp4cf_ftplugin")
     finish
@@ -100,7 +100,7 @@ endfunction
 
 function! s:LoadTests()
 	normal G<CR>
-	:r!~/olymp/Sandbox/print
+	:r!php '**/ftplugin/cpp/parser.php'
 endfunction
 
 command! CFTemplate call s:LoadTemplate()
