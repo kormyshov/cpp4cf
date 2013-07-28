@@ -13,8 +13,8 @@ function parse($str){
 		$cur = $tmp;
 
 		$in = preg_replace("/<br \/>/", "\n", $in);
-		$out= preg_replace("/<br \/>/", "\n//", $out);
-		echo $in."//".substr($out, 0, strlen($out)-2);
+		$out= preg_replace("/<br \/>/", "\n// ", $out);
+		echo $in."// ".substr($out, 0, strlen($out)-3);
 		echo "*/";
 	}
 }
