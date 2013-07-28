@@ -98,13 +98,13 @@ function! s:Patch()
 	:%s/int cpp4cf()/int cpp4cf_main()/
 endfunction
 
-function! s:LoadTests()
+function! s:LoadTests(contest, task)
 	normal G<CR>
-	:r!php $HOME/.vim/bundle/cpp4cf/ftplugin/cpp/parser.php
+	:r!php $HOME/.vim/bundle/cpp4cf/ftplugin/cpp/parser.php a:contest a:task
 endfunction
 
 command! CFTemplate call s:LoadTemplate()
 command! CFPatch call s:Patch()
-command! CFTests call s:LoadTests()
+command! -nargs=+ CFTests call s:LoadTests(<f-args>)
 
 
