@@ -100,7 +100,7 @@ endfunction
 
 function! s:LoadTests(contest, task)
 	normal G<CR>
-	let s:cpp4cf_path = 'php '.$HOME.'/.vim/bundle/cpp4cf/ftplugin/cpp/parser.php '.a:contest.' '.a:tast
+	let s:cpp4cf_path = 'php '.$HOME.'/.vim/bundle/cpp4cf/ftplugin/cpp/parser.php '.a:contest.' '.a:task
 	:r!s:cpp4cf_path
 "	:r!php $HOME/.vim/bundle/cpp4cf/ftplugin/cpp/parser.php a:contest a:task
 endfunction
