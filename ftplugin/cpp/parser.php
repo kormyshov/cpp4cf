@@ -15,7 +15,7 @@ function parse($str){
 		$in = preg_replace("/<br \/>/", "\n", $in);
 		$out= preg_replace("/<br \/>/", "\n// ", $out);
 		echo $in."// ".substr($out, 0, strlen($out)-3);
-		echo "*/";
+		echo "*/\n";
 	}
 }
 
