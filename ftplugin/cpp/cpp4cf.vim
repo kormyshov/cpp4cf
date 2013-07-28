@@ -107,6 +107,6 @@ endfunction
 
 command! CFTemplate call s:LoadTemplate()
 command! CFPatch call s:Patch()
-command! -nargs=+ CFTests call s:LoadTests(<f-args>)
+command! -nargs=+ CFTests :r!php $HOME/.vim/bundle/cpp4cf/ftplugin/cpp/parser.php <args>
 
 
