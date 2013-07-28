@@ -1,7 +1,7 @@
 " File: cpp4cf.vim
 " Author: Kormyshov Mikhail <kormyshov {at} gmail.com>
 " Description: Plugin for fast and simple C++ solution codeforces
-" Version: 0.1.1
+" Version: 0.2.0
 " Commands: CFTemplate, CFPatch, CFTests
 
 if exists("b:did_cpp4cf_ftplugin")
@@ -96,13 +96,6 @@ function! s:Patch()
 	:%s/int main()/int cpp4cf()/
 	:%s/int cpp4cf_main()/int main()/
 	:%s/int cpp4cf()/int cpp4cf_main()/
-endfunction
-
-function! s:LoadTests(contest, task)
-	normal G<CR>
-	let s:cpp4cf_path = ':r!php '.$HOME.'/.vim/bundle/cpp4cf/ftplugin/cpp/parser.php '.a:contest.' '.a:task
-	eval(s:cpp4cf_path)
-"	:r!php $HOME/.vim/bundle/cpp4cf/ftplugin/cpp/parser.php a:contest a:task
 endfunction
 
 command! CFTemplate call s:LoadTemplate()
