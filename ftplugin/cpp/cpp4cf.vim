@@ -100,7 +100,7 @@ endfunction
 
 function! s:LoadTests()
 	normal G<CR>
-	:r!php '**/ftplugin/cpp/parser.php'
+	:r!php globpath(&rtp, '**/ftplugin/cpp/parser.php')
 endfunction
 
 command! CFTemplate call s:LoadTemplate()
